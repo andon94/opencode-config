@@ -1,0 +1,59 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "orchestrator",
+  "model": "openai/gpt-5.4",
+  "mcp": {
+    "context7": {
+      "enabled": true,
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "pencil": {
+      "command": [
+        "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+        "--app",
+        "desktop"
+      ],
+      "enabled": true,
+      "type": "local"
+    }
+  },
+  "agent": {
+    "architect": {
+      "model": "openai/gpt-5.4"
+    },
+    "backend-coder": {
+      "model": "zai-coding-plan/glm-5"
+    },
+    "docs-researcher": {
+      "model": "opencode/big-pickle"
+    },
+    "frontend-coder": {
+      "model": "zai-coding-plan/glm-5"
+    },
+    "orchestrator": {
+      "model": "openai/gpt-5.4",
+      "permission": {
+        "task": {
+          "*": "deny",
+          "docs-researcher": "allow",
+          "architect": "allow",
+          "frontend-coder": "allow",
+          "backend-coder": "allow",
+          "tester": "allow",
+          "reviewer": "allow",
+          "security-expert": "allow"
+        }
+      }
+    },
+    "reviewer": {
+      "model": "openai/gpt-5.4"
+    },
+    "security-expert": {
+      "model": "zai-coding-plan/glm-5"
+    },
+    "tester": {
+      "model": "zai-coding-plan/glm-5-turbo"
+    }
+  }
+}
