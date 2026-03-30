@@ -1,6 +1,7 @@
 ---
 description: Reads latest official docs and extracts implementation guidance.
 mode: subagent
+model: opencode/big-pickle
 permission:
   edit: deny
   bash: deny

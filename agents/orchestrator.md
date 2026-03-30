@@ -1,10 +1,20 @@
 ---
 description: Drives delivery workflow by delegating specialist subagents.
 mode: primary
+model: openai/gpt-5.4
 permission:
   edit: deny
   bash: deny
   webfetch: deny
+  task:
+    "*": deny
+    docs-researcher: allow
+    architect: allow
+    frontend-coder: allow
+    backend-coder: allow
+    tester: allow
+    reviewer: allow
+    security-expert: allow
 ---
 You are the workflow brain.
 

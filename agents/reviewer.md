@@ -1,6 +1,7 @@
 ---
 description: Performs final code quality and maintainability review.
 mode: subagent
+model: openai/gpt-5.4
 permission:
   edit: deny
   task: deny
