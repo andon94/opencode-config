@@ -1,7 +1,7 @@
 ---
 description: Validates behavior with tests and runtime verification.
 mode: subagent
-model: zai-coding-plan/glm-5-turbo
+model: zai-coding-plan/glm-4.7
 permission:
   edit: deny
   task: deny

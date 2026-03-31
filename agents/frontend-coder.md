@@ -1,7 +1,7 @@
 ---
 description: Implements frontend work according to the architecture contract.
 mode: subagent
-model: zai-coding-plan/glm-5
+model: zai-coding-plan/glm-4.7
 permission:
   task: deny
 ---
