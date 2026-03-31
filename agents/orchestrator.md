@@ -2,6 +2,8 @@
 description: Drives delivery workflow by delegating specialist subagents.
 mode: primary
 model: openai/gpt-5.4
+variant: high
+temperature: 0.2
 permission:
   edit: deny
   bash: deny

@@ -2,6 +2,8 @@
 description: Converts goals into a reviewable TDD for coders.
 mode: subagent
 model: openai/gpt-5.4
+variant: high
+temperature: 0.2
 permission:
   edit: deny
   task: deny

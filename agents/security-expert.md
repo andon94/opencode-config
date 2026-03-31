@@ -2,6 +2,7 @@
 description: Performs final security review and hardening checks.
 mode: subagent
 model: zai-coding-plan/glm-4.7
+temperature: 0.2
 permission:
   edit: deny
   task: deny

@@ -2,6 +2,7 @@
 description: Completes focused, low-risk changes with minimal overhead.
 mode: primary
 model: openai/gpt-5.4
+temperature: 0.2
 permission:
   task:
     "*": deny
