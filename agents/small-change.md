@@ -1,7 +1,7 @@
 ---
 description: Completes focused, low-risk changes with minimal overhead.
 mode: primary
-model: openai/gpt-5.4
+model: zai-coding-plan/glm-4.7
 temperature: 0.2
 permission:
   task:

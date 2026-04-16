@@ -1,7 +1,7 @@
 ---
 description: Performs final security review and hardening checks.
 mode: subagent
-model: zai-coding-plan/glm-4.7
+model: openai/gpt-5.4
 temperature: 0.2
 permission:
   edit: deny
