@@ -4,8 +4,9 @@ description:
   React composition patterns that scale. Use when refactoring components with
   boolean prop proliferation, building flexible component libraries, or
   designing reusable APIs. Triggers on tasks involving compound components,
-  render props, context providers, or component architecture. Includes React 19
-  API changes.
+  render props, context providers, or component architecture. Prefer this for
+  component API and architecture work, not generic React performance tuning.
+  Includes React 19 API changes.
 license: MIT
 metadata:
   author: vercel
@@ -28,6 +29,8 @@ Reference these guidelines when:
 - Designing flexible component APIs
 - Reviewing component architecture
 - Working with compound components or context providers
+
+Do not pull this skill in for routine styling, copy, or layout tweaks, and do not use it as a substitute for general React performance guidance unless component API design is the actual problem.
 
 ## Rule Categories by Priority
 

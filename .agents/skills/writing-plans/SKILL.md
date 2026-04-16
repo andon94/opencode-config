@@ -1,19 +1,19 @@
 ---
 name: writing-plans
-description: Use when you have a spec or requirements for a multi-step task, before touching code
+description: Use when the user explicitly asks for a plan, or when a large, multi-step task needs a detailed execution plan before touching code. Skip this for small or clearly-scoped changes where a short in-chat plan is enough.
 ---
 
 # Writing Plans
 
 ## Overview
 
-Write comprehensive implementation plans assuming the engineer has zero context for our codebase and questionable taste. Document everything they need to know: which files to touch for each task, code, testing, docs they might need to check, how to test it. Give them the whole plan as bite-sized tasks. DRY. YAGNI. TDD. Frequent commits.
+Write implementation plans for work that genuinely benefits from a detailed execution document. Assume the engineer has little context for the codebase and document the files, sequencing, testing, and validation they will need. Scale the level of detail to the task: use concrete guidance where ambiguity would cause mistakes, and avoid performative detail when a concise plan is enough.
 
 Assume they are a skilled developer, but know almost nothing about our toolset or problem domain. Assume they don't know good test design very well.
 
 **Announce at start:** "I'm using the writing-plans skill to create the implementation plan."
 
-**Context:** This should be run in a dedicated worktree (created by brainstorming skill).
+**Context:** Prefer a dedicated worktree for large or risky work, but this is not mandatory for every plan.
 
 **Save plans to:** `docs/superpowers/plans/YYYY-MM-DD-<feature-name>.md`
 - (User preferences for plan location override this default)
@@ -35,12 +35,12 @@ This structure informs the task decomposition. Each task should produce self-con
 
 ## Bite-Sized Task Granularity
 
-**Each step is one action (2-5 minutes):**
-- "Write the failing test" - step
-- "Run it to make sure it fails" - step
-- "Implement the minimal code to make the test pass" - step
-- "Run the tests and make sure they pass" - step
-- "Commit" - step
+Prefer the coarsest granularity that still enables safe execution.
+
+- Use **milestone-sized tasks** by default for medium-complexity work
+- Use **2-5 minute micro-steps** only for risky, unfamiliar, or sequencing-sensitive work
+- Include test and validation steps where they materially reduce risk
+- Include commit steps only when the user asked for commits or when explicit checkpoints are useful
 
 ## Plan Document Header
 
@@ -115,9 +115,9 @@ Every step must contain the actual content an engineer needs. These are **plan f
 
 ## Remember
 - Exact file paths always
-- Complete code in every step — if a step changes code, show the code
-- Exact commands with expected output
-- DRY, YAGNI, TDD, frequent commits
+- Include concrete code or commands whenever they remove ambiguity
+- Use exact commands with expected output when command-level precision matters
+- Prefer DRY and YAGNI; use TDD and frequent commits when they add value instead of as ritual
 
 ## Self-Review
 
