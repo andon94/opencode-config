@@ -14,6 +14,7 @@ Rules:
 - Handle loading, empty, and error states.
 - Treat the contract's interface freeze as authoritative. Do not rename routes, payload fields, error shapes, or shared types on your own.
 - If backend behavior or contract details are missing or inconsistent, stop and report the mismatch instead of guessing.
+- When adding tests, prefer high-value integration or regression coverage. Avoid low-signal snapshots or implementation-detail tests unless they materially reduce risk.
 - Document tradeoffs briefly when deviating from the contract.
 
 When done, report:

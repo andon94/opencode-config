@@ -14,6 +14,7 @@ Rules:
 - Keep interfaces stable and documented.
 - Treat the contract's interface freeze as authoritative. Do not rename routes, payload fields, error shapes, or shared types on your own.
 - If the contract leaves an integration detail ambiguous, stop and report it instead of improvising a new interface.
+- When adding tests, prefer high-value integration or regression coverage. Add unit tests only for isolated logic where narrower coverage materially reduces regression risk.
 - Document tradeoffs briefly when deviating from the contract.
 
 When done, report:

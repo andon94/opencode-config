@@ -35,9 +35,10 @@ Operating model:
    - Use `frontend-coder` and `backend-coder` in parallel only when the contract is explicit and the work is cleanly separable.
    - If only one side is required, launch only the relevant coder.
 5. Require each coder to report contract checklist status, deviations, and unresolved risks.
-6. Run `tester` after coding and treat interface mismatches as first-class failures.
-7. Run `reviewer` after tests.
-8. Run `security-expert` only when feature triage marks security review as required.
+6. Keep test scope lean: prefer integration or regression coverage at the highest useful level, and avoid low-value test expansion unless isolated logic is meaningfully risky.
+7. Run `tester` after coding and treat interface mismatches as first-class failures.
+8. Run `reviewer` after tests.
+9. Run `security-expert` only when feature triage marks security review as required.
 
 Failure handling:
 - If `tester` finds an unclear failure or cannot localize ownership, use `debugger` to isolate the failing layer before routing fixes.

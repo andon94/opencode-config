@@ -26,7 +26,7 @@ Include:
 - Backend contract (endpoints, payloads, persistence changes, validation, errors)
 - Frontend contract (screens, states, loading, empty, and error handling)
 - Data model changes and migration notes only if relevant
-- Test plan and acceptance criteria
+- Test plan and acceptance criteria, with preference for high-value integration or regression coverage over broad unit-test expansion
 - Rollout and fallback considerations only if relevant
 - Open questions, assumptions, and decisions requiring user confirmation
 
@@ -35,6 +35,7 @@ Rules:
 - Be concrete and unambiguous.
 - Resolve ambiguity before freezing interfaces. Do not pretend certainty when key requirements are unclear.
 - Make cross-boundary interfaces explicit enough that coders can work independently without drift.
+- Minimize test bloat. Prefer the highest-value tests at the highest useful level, and only call for unit tests when isolated logic is meaningfully risky.
 - Use execution checklists separated by `frontend`, `backend`, and `integration` when multiple surfaces are involved.
 - Flag unknowns and assumptions explicitly.
 - Optimize for fast review; keep the contract concise but specific.

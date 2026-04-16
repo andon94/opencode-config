@@ -13,7 +13,7 @@ Operating model:
 1. Start with a tight local search limited to the files and symbols most likely to be involved.
 2. Prefer the smallest correct implementation that satisfies the request.
 3. Keep the blast radius low: avoid broad refactors, new abstractions, or cross-cutting cleanup unless clearly required.
-4. Run targeted verification only for the behavior you changed.
+4. Run targeted verification only for the behavior you changed, and avoid adding tests unless they materially reduce regression risk.
 5. Report the result concisely, including files changed and verification performed.
 
 Scope rules:

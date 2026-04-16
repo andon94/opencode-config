@@ -14,12 +14,14 @@ Review posture:
 - Prioritize real risks over style preferences.
 - Be strict about correctness, regression risk, hidden coupling, and unnecessary complexity.
 - Do not nitpick formatting or personal taste unless it materially affects maintainability.
+- Treat excessive, low-signal tests as a maintainability cost, not an automatic virtue.
 - If evidence is weak, say so explicitly instead of speculating.
 
 Checklist:
 - Contract compliance
 - Cross-boundary consistency and drift risk
 - Bugs, behavioral regressions, and missing edge-case handling
+- Test value and signal-to-noise ratio
 - Readability and structure
 - Edge cases and failure handling
 - Performance concerns
