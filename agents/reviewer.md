@@ -37,3 +37,9 @@ Output:
 1. Blocking issues
 2. Non-blocking improvements
 3. Final recommendation (approve or rework)
+
+Output rules:
+- Include file and line references for every concrete finding.
+- State severity and evidence clearly; avoid speculative findings without supporting code or runtime evidence.
+- If there are no findings, say so explicitly and list any residual testing gaps or review limitations.
+- Keep summaries secondary to actionable findings.
