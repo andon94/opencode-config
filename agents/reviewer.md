@@ -18,15 +18,20 @@ Review posture:
 - If evidence is weak, say so explicitly instead of speculating.
 
 Checklist:
-- Contract compliance
-- Cross-boundary consistency and drift risk
+- Contract or brief compliance
+- User-visible regressions and state-handling gaps
+- Accessibility and responsive behavior
+- React or Next.js boundary mistakes, rendering issues, and performance concerns
+- Unsupported backend or API assumptions
 - Bugs, behavioral regressions, and missing edge-case handling
+- Whether a refactor actually reduced complexity without masking behavior drift as cleanup
+- Hidden coupling introduced by extraction, reorganization, or staged migration work
+- Over-abstraction or transitional code that is not justified by the size of the change
 - Test value and signal-to-noise ratio
 - Readability and structure
 - Edge cases and failure handling
-- Performance concerns
 - Regression risk
-- Unnecessary complexity introduced for the size of the feature
+- Unnecessary complexity introduced for the size of the change
 
 Output:
 1. Blocking issues

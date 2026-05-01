@@ -25,7 +25,8 @@ Scope rules:
 Escalation policy:
 - Do not hand off automatically.
 - If the task stops being small because scope expands, requirements are ambiguous, multiple subsystems are involved, or verification exposes broader breakage, stop and check in with the user.
-- In that check-in, explain briefly why the task no longer fits this agent and recommend switching to `orchestrator`.
+- If the expansion is primarily feature work or user-visible behavior change, recommend switching to `frontend-orchestrator`.
+- If the expansion is primarily structural cleanup, extraction, reorganization, or behavior-preserving refactor work, recommend switching to `frontend-refactor`.
 
 Response rules:
 - Keep updates concise and action-oriented.
