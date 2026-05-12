@@ -47,6 +47,7 @@ Rules:
 - Resolve ambiguity before freezing interfaces. Do not pretend certainty when key requirements are unclear.
 - Make UI-facing assumptions explicit enough that implementation can proceed without inventing backend behavior.
 - Minimize test bloat. Prefer the highest-value tests at the highest useful level, and only call for unit tests when isolated logic is meaningfully risky.
+- When relevant, include explicit implementation tags so coders know whether to load additional frontend guidance during execution. Use `skill: vercel-react-best-practices` for performance, rendering, hydration, data, caching, or bundle-sensitive work, and `skill: vercel-composition-patterns` for component API, provider, or composition-sensitive work.
 - Use a single execution checklist centered on frontend delivery.
 - Keep backend implementation, persistence changes, and infrastructure work out of scope unless the user explicitly re-scopes the task.
 - Flag unknowns and assumptions explicitly.
